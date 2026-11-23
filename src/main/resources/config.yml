@@ -1,0 +1,69 @@
+# ===================== MascotasX =====================
+economy:
+  enabled: true          # Usa Vault para cobrar las mascotas (si no hay Vault, son gratis)
+auto-summon: true        # Al entrar, invoca la ultima mascota que tenias fuera
+
+shop:
+  price-multiplier: 1.0   # Multiplica el precio de TODAS las mascotas (1.0 = normal, 2.0 = el doble, 0 = gratis)
+  default-sort: manual    # manual | damage | price  (de menor a mayor; cada jugador puede cambiarlo con el boton del menu)
+
+# Los títulos de menús y todos los mensajes/textos están en lang.yml
+
+combat:
+  skip-neutral: true   # true = la mascota no ataca por su cuenta a endermans ni piglins (solo si te atacan a ti o tu les pegas primero)
+
+xp-bar:
+  mode: bossbar        # bossbar | actionbar | both  (como se muestra el progreso de XP)
+  color: GREEN         # GREEN BLUE PINK PURPLE RED WHITE YELLOW
+  duration: 6          # segundos visible despues de ganar XP
+  always: false        # true = visible siempre mientras la mascota este invocada
+
+levels:
+  max: 50
+  # XP para subir de nivel = xp-base + nivel * xp-per-level + xp-curve * nivel^2  (cada nivel cuesta mas)
+  xp-base: 50
+  xp-per-level: 20
+  xp-curve: 3
+  xp-multiplier: 1.5                # Multiplicador global de XP por kill
+  damage-bonus-percent-per-level: 2 # +2% de dano por nivel (nivel 8 = +16%)
+  # Recompensas por nivel (editables desde /mascotas admin). %player% = jugador. money requiere Vault.
+  rewards:
+    5:
+      money: 500
+    10:
+      money: 1500
+      description: ["<gray>3 diamantes"]
+      commands: ["give %player% diamond 3"]
+    15:
+      money: 3000
+    20:
+      money: 5000
+      description: ["<gray>5 diamantes"]
+      commands: ["give %player% diamond 5"]
+    25:
+      money: 8000
+    30:
+      money: 12000
+      description: ["<gray>1 manzana dorada encantada"]
+      commands: ["give %player% enchanted_golden_apple 1"]
+    35:
+      money: 16000
+    40:
+      money: 22000
+      description: ["<gray>1 lingote de netherite"]
+      commands: ["give %player% netherite_ingot 1"]
+    45:
+      money: 30000
+    50:
+      money: 50000
+      description: ["<gray>2 bloques de netherite"]
+      commands: ["give %player% netherite_block 2"]
+
+cosmetics:
+  mount-level: 10      # Nivel para poder montar la mascota
+  hat-level: 5         # Nivel para usarla de sombrero
+  max-name-length: 16
+  any-item: true       # true = el jugador puede ponerle a su mascota cualquier item que tenga en la mano (solo visual)
+  # Objetos que las mascotas pueden sostener (solo items de Minecraft). Se aplica a zombis, esqueletos, piglins, allay, golem de cobre, etc.
+  hand-items: [WOODEN_SWORD, STONE_SWORD, IRON_SWORD, GOLDEN_SWORD, DIAMOND_SWORD, NETHERITE_SWORD, IRON_AXE, DIAMOND_AXE, IRON_PICKAXE, DIAMOND_PICKAXE, IRON_SHOVEL, TRIDENT, SHIELD, TORCH, LANTERN, SOUL_LANTERN, APPLE, GOLDEN_APPLE, CARROT, BREAD, COOKED_BEEF, DIAMOND, EMERALD, GOLD_INGOT, NETHERITE_INGOT, AMETHYST_SHARD, TOTEM_OF_UNDYING, POPPY, DANDELION, BOOK, COMPASS, CLOCK, SPYGLASS, FISHING_ROD, BONE, STICK, HEART_OF_THE_SEA, NAUTILUS_SHELL, BELL, LEAD, ENDER_PEARL, FIREWORK_ROCKET, COOKIE]
+

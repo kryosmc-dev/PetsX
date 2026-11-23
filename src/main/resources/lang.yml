@@ -1,0 +1,572 @@
+# =====================================================================
+#  MascotasX - IDIOMA / TEXTOS
+#  Aquí puedes editar TODOS los textos del plugin. Usa formato MiniMessage
+#  (<red>, <gold>, <bold>, <gradient:red:blue>, etc.).
+#  Los %placeholders% se reemplazan solos; no los borres si quieres que se muestren.
+#  Cada objeto de menú tiene "name" (nombre) y "lore" (lista de líneas).
+#  Si una línea del lore es solo un %placeholder% y queda vacío, la línea se omite.
+#  Tras editar usa /mascotas reload (o el panel admin > Recargar archivos).
+#  Si borras una clave, vuelve a crearse sola con su valor original.
+# =====================================================================
+
+# ---------------------------------------------------------------- títulos de menús
+titles:
+  buy: "<dark_gray><bold>MENU</bold> | <gray>Comprar"
+  pets: "<dark_gray><bold>MENU</bold> | <gray>Mascotas"
+  data: "<dark_gray><bold>MENU</bold> | <gray>Datos"
+  cosmetics: "<dark_gray><bold>MENU</bold> | <gray>Cosmeticos"
+  levels: "<dark_gray><bold>MENU</bold> | <gray>%pet% (%page%/%pages%)"   # %pet% %page% %pages%
+  effects: "<dark_gray><bold>MENU</bold> | <gray>Efectos"
+  confirm: "<dark_gray><bold>MENU</bold> | <gray>Confirmar"
+
+# ---------------------------------------------------------------- mensajes del chat
+messages:
+  prefix: "<gold><bold>MASCOTAS</bold> <dark_gray>» "
+  no-pets: "<red>Aun no tienes ninguna mascota. <gray>Compra una con <yellow>/mascotas comprar"
+  bought: "<green>Compraste a <yellow>%pet% <green>por <gold>%price%<green>."
+  already-owned: "<red>Ya tienes esta mascota."
+  no-money: "<red>No tienes suficiente dinero. Cuesta <gold>%price%<red>."
+  summoned: "<green>Invocaste a <yellow>%pet%<green>."
+  stored: "<gray>Guardaste a tu mascota."
+  need-active: "<red>Primero invoca a esta mascota desde el menu de mascotas."
+  level-up: "<yellow>%pet% <green>subio al <gold>nivel %level%<green>!"
+  locked: "<red>Necesitas el nivel <gold>%level% <red>en esta mascota."
+  not-mountable: "<red>Esta mascota no se puede montar."
+  too-big: "<red>Esta mascota es demasiado grande para usarla de sombrero."
+  name-prompt: "<yellow>Escribe el nuevo nombre en el chat <gray>(escribe <white>cancelar <gray>para salir)."
+  name-set: "<green>Tu mascota ahora se llama <yellow>%name%<green>."
+  name-cancel: "<gray>Cancelado."
+  petted: "<light_purple>Acariciaste a tu mascota."
+  reload: "<green>Configuracion recargada."
+  no-perm: "<red>No tienes permiso."
+  given: "<green>Listo: <yellow>%pet% <green>entregada a <yellow>%player%<green>."
+  usage: "<gray>Uso: <yellow>/mascotas [comprar|guardar]"
+  hold-item: "<red>Sostén en la mano el ítem que quieres ponerle a tu mascota."
+  summon-fail: "<red>No se pudo invocar a tu mascota aqui."
+  summon-fail-protected: "<red>No se pudo invocar a tu mascota aqui (zona protegida)."
+  summon-fail-respawn: "<red>No se pudo invocar a tu mascota aqui. Invocala de nuevo desde el menu."
+  only-players: "<red>Solo jugadores."
+  usage-give: "<gray>Uso: <yellow>/mascotas dar <jugador> <id>"
+  give-not-found: "<red>Jugador o mascota no encontrados."
+  usage-level: "<gray>Uso: <yellow>/mascotas nivel <jugador> <nivel>"
+  player-not-found: "<red>Jugador no encontrado."
+  no-active-pet: "<red>Ese jugador no tiene una mascota invocada."
+  invalid-level: "<red>Nivel invalido."
+  level-set: "<green>Nivel actualizado."
+
+# ---------------------------------------------------------------- barra de XP, título de subir nivel y nombre sobre la mascota
+xp:
+  text: "<yellow>%name% <gray>Lv.%level% <dark_gray>| %progress%%gain%"   # %name% %level% %progress% %gain%
+  progress: "<green>%xp%<gray>/<green>%need% <gray>(%pct%%)"
+  max: "<gold>NIVEL MÁXIMO"
+  gain: " <aqua>+%gain% XP"
+levelup:
+  title: "<gold>¡Nivel %level%!"
+  subtitle: "<yellow>%name%"
+nametag: "<yellow>%name% <gray>[<white>Lv.%level%<gray>]"   # texto sobre la cabeza de la mascota
+
+# ---------------------------------------------------------------- palabras sueltas reutilizadas por los menús
+words:
+  state-on: "<green>Activado"
+  state-off: "<red>Desactivado"
+  opt-yes: "<green>Sí"
+  opt-no: "<red>No"
+  none: "ninguno"
+  summoned: "<green>Invocada"
+  stored: "<red>Guardada"
+  equipped: "<green>Equipado"
+  not-equipped: "<red>No equipado"
+  visible: "<green>Visible"
+  hidden: "<red>Oculta"
+  act-store: "guardar"
+  act-summon: "invocar"
+  act-store-it: "guardarla"
+  act-summon-it: "invocarla"
+  act-remove: "quitarlo"
+  act-equip: "equiparlo"
+  unlocked: "<green><bold>DESBLOQUEADO"
+  locked: "<red><bold>BLOQUEADO"
+  click-use: "<yellow>Click para usar"
+  need-level: "<red>Requiere nivel %level%"
+  buy-owned: "<red>✖ Ya tienes esta mascota"
+  buy-click: "<yellow>Click para comprar"
+  sort-default: "Por defecto"
+  sort-damage: "Daño base (menor a mayor)"
+  sort-price: "Precio (menor a mayor)"
+  sort-selected: "<green>» <white>%mode%"
+  sort-other: "<dark_gray>  <gray>%mode%"
+  object-none: "ninguno (normal)"
+  custom: "personalizado (%item%)"
+  reward-money: "<gray>» Dinero: <green>%money%"
+  reward-special: "<gray>» Recompensa especial"
+  reward-effect: "<gray>» Desbloquea el efecto <aqua>%effect%"
+  reward-hat: "<gray>» Desbloquea <aqua>usarla de sombrero"
+  reward-mount: "<gray>» Desbloquea <aqua>montarla"
+  reward-text: "<gray>» %text%"
+  level-xp: "<gray>XP para este nivel: <white>%xp%"
+  level-name: "<gold>%name% <white>Lvl. %level%"
+  xp-line: "%bar% <gray>%xp%/%need%"
+
+# ---------------------------------------------------------------- botones comunes
+items:
+  common:
+    back:
+      name: "<red>Volver"
+    close:
+      name: "<red>Cerrar"
+    prev:
+      name: "<green>« Anterior"
+    next:
+      name: "<green>Siguiente »"
+
+  # ------------------------------------------------------------ menú Mascotas
+  pets:
+    pet:
+      name: "<gold>%name%"
+      lore:
+        - " "
+        - "<gray>Nivel: <white>%level%<gray>/%max%"
+        - "%xpline%"
+        - "<gray>Daño: <red>%damage%"
+        - "<gray>Estado: %state%"
+        - " "
+        - "<yellow>Click izquierdo: <white>%action%"
+        - "<yellow>Click derecho: <white>abrir datos"
+
+  # ------------------------------------------------------------ menú Datos
+  data:
+    info:
+      name: "<gold>%name%"
+      lore:
+        - " "
+        - "<gray>Nivel: <white>%level%<gray>/%max%"
+        - "%xpline%"
+        - "<gray>Daño: <red>%damage%"
+    mute:
+      name: "<yellow>Silenciar"
+      lore:
+        - " "
+        - "<gray>Estado: %state%"
+        - " "
+        - "<yellow>Click para cambiar"
+    burn:
+      name: "<yellow>Ardiendo"
+      lore:
+        - " "
+        - "<gray>Estado: %state%"
+        - " "
+        - "<yellow>Click para cambiar"
+    hand:
+      name: "<green>Objeto"
+    head:
+      name: "<green>Cabeza"
+    object:
+      lore:
+        - " "
+        - "<gray>Actual: <white>%current%"
+        - " "
+        - "<yellow>Click con un ítem en la mano: <white>ponérselo"
+        - "<yellow>Click derecho o Shift: <white>quitarlo"
+    cosmetics:
+      name: "<light_purple>Cosméticos"
+      lore:
+        - " "
+        - "<gray>Montar, sombrero, nombrar,"
+        - "<gray>voltear y más."
+        - " "
+        - "<yellow>Click para abrir"
+    levels:
+      name: "<green>Niveles"
+      lore:
+        - " "
+        - "<gray>Mira las recompensas de cada nivel."
+        - " "
+        - "<yellow>Click para abrir"
+    effects:
+      name: "<aqua>Efectos"
+      lore:
+        - " "
+        - "<gray>Efectos que te da tu mascota."
+        - " "
+        - "<yellow>Click para abrir"
+    attack:
+      name: "<red>Modo de ataque"
+      lore:
+        - " "
+        - "<gray>Estado: %state%"
+        - " "
+        - "<yellow>Click para cambiar"
+    summon-on:
+      name: "<red>Guardar mascota"
+      lore:
+        - " "
+        - "<yellow>Click para guardarla"
+    summon-off:
+      name: "<green>Invocar mascota"
+      lore:
+        - " "
+        - "<yellow>Click para invocarla"
+
+  # ------------------------------------------------------------ menú Cosméticos
+  cosmetics:
+    mount:
+      name: "<gold>Montar"
+      lore:
+        - " "
+        - "<gray>Súbete a tu mascota y recorre"
+        - "<gray>el mundo con ella."
+        - "%status%"
+    hat:
+      name: "<aqua>Sombrero"
+      lore:
+        - " "
+        - "<gray>Lleva a tu mascota en la cabeza."
+        - "%status%"
+    name:
+      name: "<yellow>Nombrar"
+      lore:
+        - " "
+        - "<gray>Nombre actual: <white>%name%"
+        - " "
+        - "<yellow>Click para cambiar"
+    flip:
+      name: "<light_purple>Voltear"
+      lore:
+        - " "
+        - "<gray>Estado: %state%"
+        - " "
+        - "<yellow>Click para cambiar"
+    baby:
+      name: "<green>Bebé"
+      lore:
+        - " "
+        - "<gray>Gratis y sin subir niveles."
+        - "<gray>Estado: %state%"
+        - " "
+        - "<yellow>Click para cambiar"
+    baby-unavailable:
+      name: "<red>Bebé"
+      lore:
+        - " "
+        - "<gray>Este mob no tiene versión bebé."
+    pet:
+      name: "<light_purple>Acariciar"
+      lore:
+        - " "
+        - "<gray>Dale cariño a tu mascota."
+        - " "
+        - "<yellow>Click para acariciar"
+    color:
+      name: "<gold>Color"
+      lore:
+        - " "
+        - "<gray>Actual: <white>%current%"
+        - " "
+        - "<yellow>Click para cambiar"
+    variant:
+      name: "<gold>Aspecto"
+      lore:
+        - " "
+        - "<gray>Variante: <white>%index%<gray>/%total%"
+        - " "
+        - "<yellow>Click para cambiar"
+    extra:   # cosméticos únicos de cada mob (los nombres y opciones están en la sección "extras" de abajo)
+      name: "<aqua>%name%"
+      lore:
+        - " "
+        - "<gray>Actual: <white>%current%"
+        - "<gray>Opción: <white>%index%<gray>/%total%"
+        - " "
+        - "<yellow>Click izq: <white>siguiente"
+        - "<yellow>Click der: <white>anterior"
+        - "<yellow>Shift: <white>restablecer"
+
+  # ------------------------------------------------------------ menú Niveles
+  levels:
+    level:
+      name: "%levelname%"
+      lore:
+        - " "
+        - "<white>Recompensas:"
+        - "<gray>» Otorga <green>+%bonus%%<gray> de bonificación de daño"
+        - "%rewards%"
+        - " "
+        - "%status%"
+        - "%xpneeded%"
+
+  # ------------------------------------------------------------ menú Efectos
+  effects:
+    locked:
+      name: "<red>%name%"
+      lore:
+        - " "
+        - "<gray>Requiere nivel <white>%level%"
+        - "<red>BLOQUEADO"
+    effect:
+      name: "<aqua>%name%"
+      lore:
+        - " "
+        - "<gray>Estado: %state%"
+        - "<gray>Solo puedes tener <white>1 <gray>efecto equipado."
+        - "<gray>Se aplica mientras tu mascota esté invocada."
+        - " "
+        - "<yellow>Click para %action%"
+
+  # ------------------------------------------------------------ tienda
+  buy:
+    pet:
+      name: "<gold>%name%"
+      lore:
+        - " "
+        - "<gray>Daño base: <red>%damage%"
+        - "<gray>Precio: <green>%price%"
+        - " "
+        - "%status%"
+    sort:
+      name: "<aqua>Ordenar tienda"
+      lore:
+        - " "
+        - "%modes%"
+        - " "
+        - "<yellow>Click para cambiar el orden"
+
+  # ------------------------------------------------------------ confirmar compra
+  confirm:
+    pet:
+      name: "<gold>%name%"
+      lore:
+        - " "
+        - "<gray>Daño base: <red>%damage%"
+        - "<gray>Precio: <green>%price%"
+    accept:
+      name: "<green><bold>CONFIRMAR"
+      lore:
+        - " "
+        - "<gray>Comprar a <gold>%name%"
+        - "<gray>por <green>%price%"
+        - " "
+        - "<yellow>Click para confirmar"
+    cancel:
+      name: "<red><bold>CANCELAR"
+      lore:
+        - " "
+        - "<gray>Volver a la tienda sin comprar."
+        - " "
+        - "<yellow>Click para cancelar"
+
+# ---------------------------------------------------------------- cosméticos únicos por mob
+# Se rellena sola al iniciar el plugin: extras.<MOB>.<clave>.name y .labels (lista de opciones).
+# Si cambias el número de opciones de una lista, se ignora y se usa la original.
+extras: {}
+
+# =====================================================================
+#  PANEL DE ADMINISTRACIÓN
+# =====================================================================
+admin:
+  title: "<dark_gray><bold>ADMIN</bold> | <gray>%sub%"
+  say: "<gold><bold>ADMIN</bold> <dark_gray>» %text%"
+  subtitles:
+    panel: "Panel"
+    messages: "Mensajes (%page%)"
+    customize: "Personalizar"
+    players: "Jugadores"
+    player: "Jugador"
+    pets: "Mascotas"
+    effects: "Efectos"
+    give: "Dar mascota"
+    edit: "Editar mascota"
+    rewards: "Recompensas (%page%)"
+    settings: "Ajustes"
+    pet-effects: "Efectos de mascota"
+  say-texts:
+    reloaded: "<green>Archivos recargados."
+    msg-updated: "<green>Mensaje actualizado."
+    title-updated: "<green>Título actualizado."
+    icon-updated: "<green>Icono actualizado."
+    bad-material: "<red>Material no válido."
+    not-online: "<red>El jugador ya no está conectado."
+    gave: "<green>Entregaste <yellow>%pet% <green>a <yellow>%player%<green>."
+    no-active: "<red>No tiene una mascota invocada."
+    shift-confirm: "<yellow>Usa Shift + click para confirmar."
+    wiped: "<green>Se quitaron las mascotas de %player%."
+    name-updated: "<green>Nombre actualizado."
+    hold-icon: "<red>Sostén en la mano el ítem que quieres usar de icono."
+    command-added: "<green>Comando agregado al nivel %level%."
+  prompts:
+    message: "<yellow>Escribe el nuevo texto de <white>%key% <gray>(o <white>cancelar<gray>)."
+    title: "<yellow>Escribe el nuevo título de «%name%» <gray>(o <white>cancelar<gray>)."
+    icon: "<yellow>Escribe el material para «%name%» <gray>(ej: DIAMOND; o <white>cancelar<gray>)."
+    pet-name: "<yellow>Escribe el nuevo nombre <gray>(o <white>cancelar<gray>)."
+    reward-command: "<yellow>Escribe el comando para el nivel %level% <gray>(usa %player%; opcional: <white>comando | descripción<gray>; o <white>cancelar<gray>)."
+  words:
+    opt-yes: "<green>Sí"
+    opt-no: "<red>No"
+    state-on: "<green>Activado"
+    state-off: "<red>Desactivado"
+    visible: "<green>Visible"
+    hidden: "<red>Oculta"
+    none-active: "ninguna"
+    no-commands: "<dark_gray>ninguno"
+    command-line: "<dark_gray>  /%cmd%"
+    for-edit: "editar"
+    for-effects: "ver efectos"
+    for-give: "entregar"
+  menu:
+    panel:
+      pets:
+        name: "<gold>Mascotas"
+        lore: [" ", "<gray>Precio, daño, tipo de ataque,", "<gray>nombre y visibilidad en la tienda.", " ", "<yellow>Click para abrir"]
+      settings:
+        name: "<aqua>Ajustes y niveles"
+        lore: [" ", "<gray>XP, dificultad, bonos de daño,", "<gray>niveles de montar y sombrero.", " ", "<yellow>Click para abrir"]
+      rewards:
+        name: "<green>Recompensas por nivel"
+        lore: [" ", "<gray>Dinero y comandos de cada nivel.", " ", "<yellow>Click para abrir"]
+      effects:
+        name: "<light_purple>Efectos por mascota"
+        lore: [" ", "<gray>Nivel de desbloqueo de cada efecto.", " ", "<yellow>Click para abrir"]
+      customize:
+        name: "<gold>Personalizar menús"
+        lore: [" ", "<gray>Títulos, fondo, iconos y botones", "<gray>de los menús.", " ", "<yellow>Click para abrir"]
+      messages:
+        name: "<aqua>Mensajes"
+        lore: [" ", "<gray>Edita los mensajes del chat.", "<gray>(Todo el resto está en lang.yml)", " ", "<yellow>Click para abrir"]
+      players:
+        name: "<yellow>Jugadores"
+        lore: [" ", "<gray>Dar mascotas, cambiar niveles", "<gray>o quitar mascotas a jugadores.", " ", "<yellow>Click para abrir"]
+      reload:
+        name: "<green>Recargar archivos"
+        lore: [" ", "<gray>Vuelve a leer config.yml, lang.yml,", "<gray>pets.yml y effects.yml.", " ", "<yellow>Click para recargar"]
+    messages:
+      entry:
+        name: "<yellow>%key%"
+        lore: [" ", "<gray>Actual:", "<white>%value%", " ", "<yellow>Click izq: <white>editar (chat)", "<yellow>Click der: <white>restaurar original", "<gray>Variables: %pet% %price% %level% %name% %player%"]
+    customize:
+      info:
+        name: "<gold>Personalizar menús"
+        lore: [" ", "<gray>Títulos: click para escribir uno nuevo", "<gray>en el chat (admite colores MiniMessage).", "<gray>Iconos: click con un ítem en la mano para", "<gray>usarlo; sin ítem, escribes el material.", "<gray>Click derecho: restaurar el original."]
+      title:
+        name: "<yellow>Título: %name%"
+        lore: [" ", "<gray>Actual:", "<white>%value%", " ", "%help%", "<yellow>Click izq: <white>cambiar", "<yellow>Click der: <white>restaurar"]
+      title-help-levels: "<gray>Usa %pet%, %page% y %pages%."
+      title-help: "<gray>Texto libre."
+      icon:
+        name: "<aqua>%name%"
+        lore: [" ", "<gray>Actual: <white>%current%", " ", "<yellow>Click izq: <white>usar el ítem de tu mano", "<yellow>Click der: <white>restaurar"]
+      title-names:
+        buy: "Comprar"
+        pets: "Mascotas"
+        data: "Datos"
+        cosmetics: "Cosméticos"
+        levels: "Niveles"
+        effects: "Efectos"
+        confirm: "Confirmar compra"
+      icon-names:
+        filler: "Fondo de los menús"
+        levels-reached: "Nivel desbloqueado"
+        levels-next: "Siguiente nivel"
+        levels-locked: "Nivel bloqueado"
+        data-mute: "Botón Silenciar"
+        data-burn: "Botón Ardiendo"
+        data-cosmetics: "Botón Cosméticos"
+        data-levels: "Botón Niveles"
+        data-effects: "Botón Efectos"
+        data-attack: "Botón Modo de ataque"
+        data-summon: "Botón Invocar/Guardar"
+        data-back: "Botón Volver"
+        confirm-yes: "Confirmar compra: aceptar"
+        confirm-no: "Confirmar compra: cancelar"
+    players:
+      player:
+        name: "<yellow>%player%"
+        lore: [" ", "<gray>Mascotas: <white>%count%", "<gray>Invocada: <white>%active%", " ", "<yellow>Click para gestionar"]
+    player:
+      head:
+        name: "<yellow>%player%"
+        lore: [" ", "<gray>Mascotas: <white>%count%"]
+      give:
+        name: "<green>Dar mascota"
+        lore: [" ", "<gray>Elige una mascota para entregarle.", " ", "<yellow>Click para elegir"]
+      level:
+        name: "<aqua>Nivel de su mascota invocada"
+        lore: [" ", "%status%", " ", "<yellow>Click izq: <white>+1", "<yellow>Click der: <white>-1", "<yellow>Shift: <white>x5"]
+      level-none: "<red>No tiene una mascota invocada"
+      level-current: "<gray>Nivel actual: <white>%level%<gray>/%max%"
+      wipe:
+        name: "<red>Quitar todas sus mascotas"
+        lore: [" ", "<gray>Esto no se puede deshacer.", " ", "<yellow>Shift + click para confirmar"]
+    pick:
+      pet:
+        name: "<gold>%name%"
+        lore: [" ", "<gray>Precio: <green>%price%", "<gray>Daño base: <red>%damage%", "<gray>Ataque: <white>%attack%", "<gray>En la tienda: %shop%", " ", "<yellow>Click para %action%"]
+    edit:
+      info:
+        name: "<gold>%name%"
+        lore: [" ", "<gray>ID: <white>%id%", "<gray>Entidad: <white>%entity%"]
+      price:
+        name: "<green>Precio"
+        lore: [" ", "<gray>Base: <green>%base%", "<gray>Con multiplicador: <green>%final%", " ", "<yellow>Click izq: <white>+100", "<yellow>Click der: <white>-100", "<yellow>Shift: <white>x10"]
+      damage:
+        name: "<red>Daño base"
+        lore: [" ", "<gray>Actual: <red>%damage%", " ", "<yellow>Click izq: <white>+0.5", "<yellow>Click der: <white>-0.5", "<yellow>Shift: <white>x10"]
+      enabled:
+        name: "<yellow>En la tienda"
+        lore: [" ", "<gray>Estado: %state%", " ", "<yellow>Click para cambiar"]
+      attack:
+        name: "<aqua>Tipo de ataque"
+        lore: [" ", "<gray>Actual: <white>%attack%", "<gray>melee, arrow, fireball, snowball,", "<gray>spit, potion, wind, fangs", " ", "<yellow>Click para cambiar"]
+      flying:
+        name: "<aqua>Vuela"
+        lore: [" ", "<gray>Estado: %state%", " ", "<yellow>Click para cambiar"]
+      shopname:
+        name: "<yellow>Nombre en la tienda"
+        lore: [" ", "<gray>Actual: <white>%name%", " ", "<yellow>Click para cambiar (chat)"]
+      icon:
+        name: "<yellow>Icono en la tienda"
+        lore: [" ", "<gray>Actual: <white>%current%", " ", "<yellow>Click izq: <white>usar el ítem de tu mano", "<yellow>Click der: <white>restaurar"]
+      page:
+        name: "<aqua>Página de la tienda"
+        lore: [" ", "<gray>Actual: <white>%page%", " ", "<yellow>Click izq: <white>+1", "<yellow>Click der: <white>-1"]
+      slot:
+        name: "<aqua>Posición (slot)"
+        lore: [" ", "<gray>Actual: <white>%slot%", " ", "<yellow>Click izq: <white>+1", "<yellow>Click der: <white>-1", "<yellow>Shift: <white>±9 (una fila)"]
+    rewards:
+      level:
+        name: "%color%Nivel %level%"
+        lore: [" ", "<gray>Dinero: <green>%money%", "%commands%", " ", "<yellow>Click izq/der: <white>+/- $100 <gray>(Shift x10)", "<yellow>Q: <white>agregar comando (chat)", "<yellow>Ctrl+Q: <white>borrar comandos"]
+      commands-header: "<gray>Comandos:"
+    settings:
+      preview:
+        name: "<gold>Vista previa de dificultad"
+        lore: [" ", "<gray>XP necesaria para subir:", "%lines%"]
+      preview-line: "<gray>» Nivel %from% → %to%: <white>%xp%"
+      setting:
+        name: "<aqua>%name%"
+        lore: [" ", "<gray>%help%", "<gray>Valor: %value%", " ", "%controls%"]
+      controls-toggle: "<yellow>Click para cambiar"
+      controls-number: "<yellow>Click izq: <white>+%step%\n<yellow>Click der: <white>-%step%\n<yellow>Shift: <white>x10"
+      entries:
+        levels-max: {name: "Nivel máximo", help: "Nivel más alto que puede tener una mascota."}
+        levels-xp-base: {name: "XP base", help: "Parte fija de la XP para subir."}
+        levels-xp-per-level: {name: "XP por nivel", help: "Suma XP extra por cada nivel."}
+        levels-xp-curve: {name: "Curva de dificultad", help: "Más alto = los niveles altos cuestan mucho más."}
+        levels-xp-multiplier: {name: "Multiplicador de XP", help: "XP ganada por cada kill."}
+        levels-damage-bonus-percent-per-level: {name: "Bonus de daño (% por nivel)", help: "Daño extra por cada nivel."}
+        cosmetics-mount-level: {name: "Nivel para montar", help: "Nivel mínimo para montar la mascota."}
+        cosmetics-hat-level: {name: "Nivel para sombrero", help: "Nivel mínimo para usarla de sombrero."}
+        cosmetics-max-name-length: {name: "Largo máx. del nombre", help: "Caracteres permitidos al nombrar."}
+        xp-bar-mode: {name: "Barra de XP: modo", help: "Cómo se muestra el progreso al ganar XP."}
+        xp-bar-color: {name: "Barra de XP: color", help: "Color de la barra superior."}
+        xp-bar-duration: {name: "Barra de XP: segundos visible", help: "Tiempo que se ve tras ganar XP."}
+        xp-bar-always: {name: "Barra de XP: siempre visible", help: "Visible mientras la mascota esté invocada."}
+        auto-summon: {name: "Invocar al entrar", help: "Invoca la última mascota al entrar."}
+        economy-enabled: {name: "Usar economía (Vault)", help: "Cobrar las mascotas con dinero."}
+        shop-price-multiplier: {name: "Multiplicador de precios", help: "Multiplica el precio de TODAS las mascotas (1.00 = normal, 0 = gratis)."}
+        shop-default-sort: {name: "Orden de la tienda", help: "manual, damage (daño) o price (precio), de menor a mayor."}
+    effects:
+      effect:
+        name: "<aqua>%name%"
+        lore: [" ", "<gray>Efecto: <white>%type% <gray>(nivel %amp%)", "<gray>Se desbloquea en el nivel: <gold>%level%", " ", "<yellow>Click izq: <white>+1", "<yellow>Click der: <white>-1", "<yellow>Shift: <white>x10"]
+      info:
+        name: "<gold>%name%"
+        lore: [" ", "<gray>Para cambiar tipo o potencia de un efecto", "<gray>edita <white>effects.yml<gray>."]
